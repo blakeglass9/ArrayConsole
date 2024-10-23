@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Step 1: One-dimensional array of strings
+        string[] stringArray = { "Apple", "Banana", "Cherry", "Date", "Elderberry" };
+
+        // Ask the user to select an index for the string array
+        Console.WriteLine("Select an index of the string array (0 to 4):");
+        int stringIndex = Convert.ToInt32(Console.ReadLine());
+
+        // Check if the index is valid and display the result or an error message
+        if (stringIndex >= 0 && stringIndex < stringArray.Length)
+        {
+            Console.WriteLine("You selected: " + stringArray[stringIndex]);
+        }
+        else
+        {
+            Console.WriteLine("Index out of bounds.");
+        }
+
+        // Step 2: One-dimensional array of integers
+        int[] intArray = { 10, 20, 30, 40, 50 };
+
+        // Ask the user to select an index for the integer array
+        Console.WriteLine("\nSelect an index of the integer array (0 to 4):");
+        int intIndex = Convert.ToInt32(Console.ReadLine());
+
+        // Check if the index is valid and display the result or an error message
+        if (intIndex >= 0 && intIndex < intArray.Length)
+        {
+            Console.WriteLine("You selected: " + intArray[intIndex]);
+        }
+        else
+        {
+            Console.WriteLine("Index out of bounds.");
+        }
+
+        // Step 3: List of strings
+        List<string> stringList = new List<string> { "Car", "Bike", "Boat", "Plane", "Train" };
+
+        // Ask the user to select an index for the string list
+        Console.WriteLine("\nSelect an index of the string list (0 to 4):");
+        int listIndex = Convert.ToInt32(Console.ReadLine());
+
+        // Check if the index is valid and display the result or an error message
+        if (listIndex >= 0 && listIndex < stringList.Count)
+        {
+            Console.WriteLine("You selected: " + stringList[listIndex]);
+        }
+        else
+        {
+            Console.WriteLine("Index out of bounds.");
+        }
+
+        // Pause the program to allow the user to see the output
+        Console.ReadKey();
+    }
+}
